@@ -44,14 +44,16 @@
   </dmn:itemDefinition>
   <dmn:decision id="_2D70E87F-D1CB-426E-B709-E998513DE1C7" name="Fine">
     <dmn:extensionElements/>
-    <dmn:variable id="_76BE36B7-CC10-4CD1-9944-5C4F3AC7BD22" name="Fine"/>
+    <dmn:variable id="_76BE36B7-CC10-4CD1-9944-5C4F3AC7BD22" name="Fine" typeRef="tFine"/>
     <dmn:informationRequirement id="_5DE43929-561E-4A26-BEE5-8C1DF9446AC4">
       <dmn:requiredInput href="#_A1F963E5-E05B-4FB7-85E1-15A016CB3C6D"/>
     </dmn:informationRequirement>
   </dmn:decision>
   <dmn:decision id="_A1DA74D6-C666-4D5C-859B-04375B6E6DF8" name="Should the driver be suspended?">
     <dmn:extensionElements/>
-    <dmn:variable id="_692FE143-3EA1-4A54-87EE-89FE68C52A4B" name="Should the driver be suspended?"/>
+    <dmn:question>Should the driver be suspended due to points on his driver license?</dmn:question>
+    <dmn:allowedAnswers>Yes,No</dmn:allowedAnswers>
+    <dmn:variable id="_692FE143-3EA1-4A54-87EE-89FE68C52A4B" name="Should the driver be suspended?" typeRef="string"/>
     <dmn:informationRequirement id="_78E56F45-31DF-4E8C-B9F3-8830D470328A">
       <dmn:requiredInput href="#_8D913BB6-F3E8-4FC1-A704-C8ADCED84D8E"/>
     </dmn:informationRequirement>
@@ -61,11 +63,11 @@
   </dmn:decision>
   <dmn:inputData id="_A1F963E5-E05B-4FB7-85E1-15A016CB3C6D" name="Violation">
     <dmn:extensionElements/>
-    <dmn:variable id="_21A3501D-796F-4A95-9830-30684EF0DD5E" name="Violation"/>
+    <dmn:variable id="_21A3501D-796F-4A95-9830-30684EF0DD5E" name="Violation" typeRef="tViolation"/>
   </dmn:inputData>
   <dmn:inputData id="_8D913BB6-F3E8-4FC1-A704-C8ADCED84D8E" name="Driver">
     <dmn:extensionElements/>
-    <dmn:variable id="_29B45B54-995C-4E2B-B8AD-D41CFCDC087F" name="Driver"/>
+    <dmn:variable id="_29B45B54-995C-4E2B-B8AD-D41CFCDC087F" name="Driver" typeRef="tDriver"/>
   </dmn:inputData>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram>
